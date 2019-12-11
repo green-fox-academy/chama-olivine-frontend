@@ -1,0 +1,8 @@
+<div class="heroList">
+  <p>Heroes</p>
+  <div *ngFor="let hero of myHeroes" (click)="navigateHero(hero.id, hero.name)">
+    <p>
+      This hero id is: {{hero.id}} <br>This hero name is {{hero.name}}
+    </p>
+  </div>
+</div>
