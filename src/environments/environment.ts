@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  hostname: 'https://angular-dungeoncrawler.herokuapp.com',
+  hostname: 'https://hero-manager-backend.herokuapp.com',
 };
 
 /*

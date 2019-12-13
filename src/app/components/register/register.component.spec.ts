@@ -18,6 +18,7 @@ import { DungeonMockComponent } from '../dungeon-mock/dungeon-mock.component';
 import { InventoryMockComponent } from '../inventory-mock/inventory-mock.component';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { SingleHeroPageComponent } from './../single-hero-page/single-hero-page.component';
+import { CreateHeroComponent } from '../create-hero/create-hero.component';
 
 describe('RegisterComponent', () => {
   let component: RegisterComponent;
@@ -37,7 +38,9 @@ describe('RegisterComponent', () => {
         NavBarComponent,
         SingleHeroPageComponent,
         HallComponent,
-        AvatarComponent],
+        AvatarComponent,
+        CreateHeroComponent
+      ],
       imports: [
         BrowserModule,
         AppRoutingModule,

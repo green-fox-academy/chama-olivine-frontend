@@ -1,16 +1,16 @@
-import { AvatarComponent } from './../avatar/avatar.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HallComponent } from './hall.component';
-import { RouterTestingModule } from '@angular/router/testing';
+import { CreateHeroComponent } from './create-hero.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { CreateHeroComponent } from '../create-hero/create-hero.component';
+import { HallComponent } from '../hall/hall.component';
+import { AvatarComponent } from '../avatar/avatar.component';
 
-describe('HallComponent', () => {
-  let component: HallComponent;
-  let fixture: ComponentFixture<HallComponent>;
+describe('CreateHeroComponent', () => {
+  let component: CreateHeroComponent;
+  let fixture: ComponentFixture<CreateHeroComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -21,11 +21,12 @@ describe('HallComponent', () => {
         HttpClientTestingModule
       ],
       declarations: [HallComponent, AvatarComponent, CreateHeroComponent]
-    }).compileComponents();
+    })
+      .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HallComponent);
+    fixture = TestBed.createComponent(CreateHeroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

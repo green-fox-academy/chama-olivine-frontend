@@ -21,6 +21,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { HallComponent } from './components/hall/hall.component';
+import { CreateHeroComponent } from './components/create-hero/create-hero.component';
+
 
 @NgModule({
   declarations: [
@@ -36,13 +38,14 @@ import { HallComponent } from './components/hall/hall.component';
     RegisterComponent,
     SingleHeroPageComponent,
     AvatarComponent,
-    HallComponent
+    HallComponent,
+    CreateHeroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [
     ApiService,

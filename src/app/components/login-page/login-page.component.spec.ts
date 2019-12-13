@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { CreateHeroComponent } from '../create-hero/create-hero.component';
 
 describe('LoginPageComponent', () => {
   let component: LoginPageComponent;
@@ -23,7 +24,8 @@ describe('LoginPageComponent', () => {
       declarations: [
         LoginPageComponent,
         HallComponent,
-        AvatarComponent
+        AvatarComponent,
+        CreateHeroComponent
       ]
     })
       .compileComponents();

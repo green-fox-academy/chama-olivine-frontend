@@ -13,6 +13,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HelloWorldComponent } from './components/hello-world/hello-world.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { CreateHeroComponent } from './components/create-hero/create-hero.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -35,7 +36,8 @@ describe('AppComponent', () => {
         NotFoundComponent,
         HomePageComponent,
         HallComponent,
-        AvatarComponent
+        AvatarComponent,
+        CreateHeroComponent
       ],
     }).compileComponents();
   }));
