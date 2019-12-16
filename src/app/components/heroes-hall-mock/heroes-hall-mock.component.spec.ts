@@ -1,5 +1,4 @@
 import { RouterTestingModule } from '@angular/router/testing';
-import { HeroMockComponent } from './../hero-mock/hero-mock.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeroesHallMockComponent } from './heroes-hall-mock.component';
@@ -15,7 +14,6 @@ describe('HeroesHallMockComponent', () => {
       ],
       declarations: [
         HeroesHallMockComponent,
-        HeroMockComponent
       ]
     })
       .compileComponents();

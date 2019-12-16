@@ -1,0 +1,55 @@
+.imageAndName > .heroName {
+  text-align: center;
+}
+
+.compartments > div{
+  height: 65vh;
+}
+
+.details, .Activity > p {
+  font-size: 3vh;
+}
+
+p{
+  margin-bottom: 0px;
+}
+
+.br{
+  margin-bottom: 3vh;
+}
+
+.btn-group {
+  height: 4vh;
+}
+
+.btn-group > * {
+  font-size: 2vh;
+  color: black;
+  border-color: black;
+  border-radius: 0px;
+}
+
+.Container {
+  margin: 3vh;
+}
+
+.heroName > h3 {
+  margin-top: 3vh;
+  font-size: 4vh;
+}
+
+.imageAndName{
+  height: 75vh;
+}
+
+img {
+  height: 60vh;
+  width: 100%;
+  background: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.Activity{
+  height: 10vh;
+}
