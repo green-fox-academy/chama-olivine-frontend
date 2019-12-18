@@ -1,0 +1,11 @@
+<h1 class="title">Hero Manager</h1>
+<div class="loginCont">
+  <h2 class="loginHeader">Login</h2>
+  <input class="inputField" placeholder="Username" [(ngModel)]="usernameInput">
+  <input class="inputField" placeholder="Password" [(ngModel)]="passwordInput" type="password">
+  <div class="interactionsCont">
+    <a href="/registration" class="regLink">Registration</a>
+    <button class="loginButton" (click)="sendLogin()">Login</button>
+  </div>
+  <p class="messageField" *ngIf="loginMessage">{{loginMessage}}</p>
+</div>
