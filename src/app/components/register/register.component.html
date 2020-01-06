@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm">
+  <div class="container">
+    <h1 class="navbar-text">Hero Manager</h1>
+    <li class="navbar-nav ml-auto">
+      <a type="button" class="nav-link" (click)="cancelRegistration()">Login</a>
+    </li>
+  </div>
+</nav>
+<main class="my-form registerPage">
+  <div class="row justify-content-center">
+    <div class="card">
+      <h1 class="card-header text-center">Register</h1>
+      <form name="my-form">
+        <div class="form-group col-sm-10">
+          <input type="text" name="username" class="form-control" [(ngModel)]="username" #name="ngModel" ng-model="name" placeholder="Username" required>
+          <p for="username" class="col-form-label" *ngIf="usernameError">{{usernameError}}</p>
+        </div>
+        <div class="form-group col-sm-10">
+          <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Password" required>
+          <p for="password" class="col-form-label" *ngIf="passwordError">{{passwordError}}</p>
+        </div>
+        <div class="form-group col-sm-10">
+          <input type="password" name="confirmPsw" class="form-control" [(ngModel)]="confirmPsw" placeholder="Confirm Password" required>
+          <p for="confirmPsw" class="col-form-label" *ngIf="confirmPswError">{{confirmPswError}}</p>
+        </div>
+        <div class=" buttons col-sm-10">
+          <button type="submit" class="btn btn-secondary" (click)="cancelRegistration()">Cancel</button>
+          <button type="submit" class="btn btn-primary" (click)="registerUser()">Register</button>
+        </div>
+        <div class="form-group col-sm-10 bottomMessage" role="alert">
+          <h5 class="alert-heading">{{messageSuccess}}</h5>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
