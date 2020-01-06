@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <p class="col-xs ">
+      UserID
+    </p>
+    <div class="col-xs ">
+      <input type="text" [(ngModel)]="inputId" />
+    </div>
+    <div class="col-xs ">
+      <button (click)="populateHeroes(inputId)">Search</button>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3 vertical-center">
+  <div *ngIf="responseList" class="row">
+    <div class="card-deck">
+      <div
+        *ngFor="let hero of responseList"
+        class="card mb-4"
+        style="min-width: 10rem; max-width: 10rem;"
+      >
+        <img
+          class="card-img-top"
+          src="https://i.kym-cdn.com/photos/images/original/000/115/907/a5244ccc912d3f871f60709db39bac1bea3c33c0.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ hero.name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---<div class="container-fluid">
+  <div *ngIf="responseList">
+    <div class="heroFrame">
+      <div *ngIf="responseList.length > 0" class="heroesCointainer">
+        <div *ngFor="let hero of responseList" class="hero">
+          <img
+            src="https://i.kym-cdn.com/photos/images/original/000/115/907/a5244ccc912d3f871f60709db39bac1bea3c33c0.jpg"
+            alt="Hero bird"
+            class="heroImage"
+          />
+          <div class="heroName">
+            <p>
+              {{ hero.name }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="responseList.length <= 0" class="heroesCointainer">
+        <div class="hero">
+          <img
+            src="https://franksumatra.files.wordpress.com/2012/09/l-im-a-sad-bird.jpg"
+            alt="Hero bird"
+            class="heroImage"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>--->
