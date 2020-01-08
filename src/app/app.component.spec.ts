@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -21,7 +22,8 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        LoginPageComponent
+        LoginPageComponent,
+        NavBarComponent
       ],
     }).compileComponents();
   }));
