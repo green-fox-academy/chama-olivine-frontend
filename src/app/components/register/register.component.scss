@@ -56,3 +56,22 @@ form {
 .form-group > h5 {
   color: green;
 }
+
+@media only screen and (max-width: 416px) {
+  .registerPage .card {
+    width: 90%;
+  }
+
+  .registerNav > li {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .registerNav {
+    justify-content: center;
+  }
+
+  .registerPage h1 {
+    font-size: 1.5em;
+  }
+}
