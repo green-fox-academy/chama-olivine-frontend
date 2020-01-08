@@ -50,7 +50,7 @@ export class RegisterComponent implements OnInit {
       this.usernameError = 'Username must be at least 1 character';
       this.usernameStatus = false;
     } else if (this.myValidateFunction(this.username) === false) {
-      this.usernameError = 'Username can not contain any special character';
+      this.usernameError = `Username can not contain special characters`;
       this.usernameStatus = false;
     } else {
       this.usernameError = '';
