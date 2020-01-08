@@ -22,6 +22,7 @@ export class HeroModel {
   private _attackMinUpgraded: number;
   private _defenseUpgraded: number;
   private _healthActPercentage: number;
+  private _activeItems: Equipment[];
   _activityType: string;
 
 
@@ -47,6 +48,7 @@ export class HeroModel {
     this._neededExp = this.calcNeededExp(this.level);
     this._healthActPercentage = this.calcHealthActPercentage();
     this._activityType = champion._activityType || 'train';
+    this._activeItems = this.activeEquipments();
   }
 
   get id(): number {
@@ -184,5 +186,11 @@ export class HeroModel {
 
   private calcHealthActPercentage() {
     return Math.round(this.healthActUpgraded / (this.healthMaxUpgraded / 100));
+  }
+
+  public activeEquipments(): Equipment[] {
+    return this.inventory.filter((equipment: Equipment) => equipment.active).map((element) => {
+      return element;
+    });
   }
 }

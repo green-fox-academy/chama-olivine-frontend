@@ -1,16 +1,18 @@
 import { AttributeModifier } from './attributeModifier';
 
 export class Equipment {
+  private _id: number;
   private _name: string;
   private _modifiers: Array<AttributeModifier>;
   private _type: string;
   private _active: boolean;
 
-  constructor(name: string, modifier: Array<AttributeModifier>, type: string, active: boolean) {
-    this._name = name;
-    this._modifiers = modifier;
-    this._type = type;
-    this._active = active;
+  constructor(equipment: Equipment) {
+    this._id = equipment._id;
+    this._name = equipment._name;
+    this._modifiers = equipment._modifiers;
+    this._type = equipment._type;
+    this._active = equipment._active;
   }
 
   get name(): string {

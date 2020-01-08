@@ -30,8 +30,12 @@
           <p>Attack: {{hero.attackMinUpgraded}} - {{hero.attackMaxUpgraded}}</p>
           <p>Defense: {{hero.defenseUpgraded}}</p>
         </div>
-        <div class="col-4 inventory d-none d-sm-block "> </div>
-        <div class="col-4 itemDetails d-none d-sm-block "> </div>
+        <div class="col-4 inventory d-none d-sm-block "> 
+          <app-equipped-inventory *ngIf="hero" (equippedEmitter)="equippedItemClick($event)" [hero]="hero"></app-equipped-inventory>
+        </div>
+        <div class="col-4 itemDetails d-none d-sm-block ">
+          <app-item-detail [selectedItem]="selectedItem"></app-item-detail>
+        </div>
       </div>
     </div>
   </div>
