@@ -7,6 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { RegisterComponent } from './components/register/register.component';
+import { HelloWorldComponent } from './components/hello-world/hello-world.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -18,12 +22,16 @@ describe('AppComponent', () => {
         RouterTestingModule,
         FormsModule,
         HttpClientModule,
-        HttpClientTestingModule
+        HttpClientTestingModule,
       ],
       declarations: [
         AppComponent,
         LoginPageComponent,
-        NavBarComponent
+        NavBarComponent,
+        RegisterComponent,
+        HelloWorldComponent,
+        NotFoundComponent,
+        HomePageComponent,
       ],
     }).compileComponents();
   }));

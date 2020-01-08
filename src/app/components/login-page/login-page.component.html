@@ -4,7 +4,7 @@
   <input class="inputField" placeholder="Username" [(ngModel)]="usernameInput">
   <input class="inputField" placeholder="Password" [(ngModel)]="passwordInput" type="password">
   <div class="interactionsCont">
-    <a href="/registration" class="regLink">Registration</a>
+    <a href="/register" class="regLink btn">Registration</a>
     <button class="loginButton" (click)="sendLogin()">Login</button>
   </div>
   <p class="messageField" *ngIf="loginMessage">{{loginMessage}}</p>

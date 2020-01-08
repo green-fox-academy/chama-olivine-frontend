@@ -15,6 +15,7 @@ import { DungeonMockComponent } from './components/dungeon-mock/dungeon-mock.com
 import { HeroMockComponent } from './components/hero-mock/hero-mock.component';
 
 import { ApiService } from './services/api/api.service';
+import { RegisterComponent } from './components/register/register.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 
 @NgModule({
@@ -28,13 +29,14 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     HomePageComponent,
     InventoryMockComponent,
     DungeonMockComponent,
-    HeroMockComponent
+    HeroMockComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     ApiService

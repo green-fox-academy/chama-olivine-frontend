@@ -8,11 +8,11 @@ import { HeroesHallMockComponent } from './components/heroes-hall-mock/heroes-ha
 import { DungeonMockComponent } from './components/dungeon-mock/dungeon-mock.component';
 import { InventoryMockComponent } from './components/inventory-mock/inventory-mock.component';
 import { HeroMockComponent } from './components/hero-mock/hero-mock.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '404', component: NotFoundComponent },
-
   { path: 'login', component: LoginPageComponent},
   {
     path: 'heroes-hall', component: HomePageComponent,
@@ -29,6 +29,7 @@ const routes: Routes = [
       path: 'dungeon', component: DungeonMockComponent,
     }]
   },
+  { path: 'register', component: RegisterComponent},
   { path: '**', redirectTo: '/404', pathMatch: 'full' }
 ];
 
