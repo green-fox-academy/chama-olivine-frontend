@@ -1,11 +1,28 @@
-<h1 class="title">Hero Manager</h1>
-<div class="loginCont">
-  <h2 class="loginHeader">Login</h2>
-  <input class="inputField" placeholder="Username" [(ngModel)]="usernameInput">
-  <input class="inputField" placeholder="Password" [(ngModel)]="passwordInput" type="password">
-  <div class="interactionsCont">
-    <a href="/register" class="regLink btn">Registration</a>
-    <button class="loginButton" (click)="sendLogin()">Login</button>
+<nav class="navbar navbar-expand-sm loginNav">
+  <h1 class="navbar-text">Hero Manager</h1>
+  <li class="navbar-nav ml-auto">
+    <a type="button" class="nav-link" href="/register">Register</a>
+  </li>
+</nav>
+<main class="my-form loginPage">
+  <div class="row justify-content-center">
+    <div class="card">
+      <h1 class="card-header text-center">Login</h1>
+      <form name="my-form">
+        <div class="form-group col-sm-10">
+          <input class="form-control" placeholder="Username" [(ngModel)]="usernameInput" name="username">
+        </div>
+        <div class="form-group col-sm-10">
+          <input type="password" class="form-control" placeholder="Password" [(ngModel)]="passwordInput" name="password">
+        </div>
+        <div class="form-group buttons col-sm-10">
+          <a class="nav-link" href="/register">Registration</a>
+          <button (click)="sendLogin()" class="btn btn-primary">Login</button>
+        </div>
+        <div class="form-group col-sm-10 bottomMessage" role="alert">
+          <p class="alert-heading">{{loginMessage}}</p>
+        </div>
+      </form>
+    </div>
   </div>
-  <p class="messageField" *ngIf="loginMessage">{{loginMessage}}</p>
-</div>
+</main>

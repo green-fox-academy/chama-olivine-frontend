@@ -2,7 +2,7 @@ form {
   padding-top: 20px;
 }
 
-.registerPage .row {
+.registerPage .row, .registerNav .navbar-text {
   margin: 0px;
 }
 
@@ -31,13 +31,14 @@ form {
 
 .form-group > p {
   color: red;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
-.form-group > h5, .bottomMessage > p {
+.bottomMessage > h5 {
   text-align: center;
-  margin: 0px 0px;
+  margin: 0px auto;
   padding: 1rem;
+  color: green;
 }
 
 .buttons {
@@ -53,8 +54,13 @@ form {
   margin: 0px auto;
 }
 
-.form-group > h5 {
-  color: green;
+.bottomMessage {
+  height: 51px;
+  margin: 0px auto;
+}
+
+.registerNav a {
+  border: 1px solid black;
 }
 
 @media only screen and (max-width: 416px) {
@@ -71,7 +77,11 @@ form {
     justify-content: center;
   }
 
-  .registerPage h1 {
+  h1 {
     font-size: 1.5em;
+  }
+
+  h5 {
+    font-size: 1em;
   }
 }
