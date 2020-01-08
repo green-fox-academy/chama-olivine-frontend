@@ -27,6 +27,6 @@ export class HeroesHallMockComponent implements OnInit {
   }
 
   navigateHero(id: number, name: string) {
-    this.router.navigate([`heroes-hall/${id}/character`], { queryParams: { name: name } });
+    this.router.navigate([`heroes-hall/${id}/character`, {id: id}], { queryParams: { name: name } });
   }
 }

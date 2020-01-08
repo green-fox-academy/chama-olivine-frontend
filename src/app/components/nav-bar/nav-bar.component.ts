@@ -22,7 +22,8 @@ export class NavBarComponent implements OnInit {
   }
 
   navToPage(page: string) {
-    this.router.navigate([`/heroes-hall/${this.selectedHeroId}/${page}`], { queryParams: { name: this.heroName } });
+    this.router.navigate([`/heroes-hall/${this.selectedHeroId}/${page}`, {id: this.selectedHeroId}],
+    { queryParams: { name: this.heroName } });
   }
 
   logout() {
