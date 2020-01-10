@@ -7,8 +7,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { HeroesHallMockComponent } from './components/heroes-hall-mock/heroes-hall-mock.component';
 import { DungeonMockComponent } from './components/dungeon-mock/dungeon-mock.component';
 import { InventoryMockComponent } from './components/inventory-mock/inventory-mock.component';
-import { HeroMockComponent } from './components/hero-mock/hero-mock.component';
 import { RegisterComponent } from './components/register/register.component';
+import { SingleHeroPageComponent } from './components/single-hero-page/single-hero-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -22,7 +22,7 @@ const routes: Routes = [
   }, {
     path: 'heroes-hall/:id', component: HomePageComponent,
     children: [{
-      path: 'character', component: HeroMockComponent,
+      path: 'character', component: SingleHeroPageComponent,
     }, {
       path: 'inventory', component: InventoryMockComponent,
     }, {
@@ -40,3 +40,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [SingleHeroPageComponent];

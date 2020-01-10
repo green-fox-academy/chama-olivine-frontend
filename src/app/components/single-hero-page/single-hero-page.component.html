@@ -1,0 +1,43 @@
+<div class='Container' *ngIf='hero'>
+  <div class='row'>
+    <div class='imageAndName col-3'>
+      <img src={{hero.bigImage}} />
+      <div class='heroName'>
+        <h3>{{hero.name}}</h3>
+      </div>
+    </div>
+    <div class='col-9'>
+      <div class='row Activity'>
+        <p class='col-3'>Activity:</p>
+        <div class="btn-group btn-group-toggle col-9" data-toggle="buttons">
+          <label class="btn btn-outline-secondary active">
+            <input type="radio" name="options" id="option1" checked> Rest
+          </label>
+          <label class="btn btn-outline-secondary">
+            <input type="radio" name="options" id="option2"> Train
+          </label>
+          <label class="btn btn-outline-secondary">
+            <input type="radio" name="options" id="option3"> Scout
+          </label>
+        </div>
+      </div>
+      <div class='row compartments'>
+        <div class='col-4 details'>
+          <p>Level: {{hero.level}}</p>
+          <p class='br'>Exp needed: {{hero.neededExp}}</p>
+          <p>Stats:</p>
+          <p>Max health: {{hero.healthMaxUpgraded}}</p>
+          <p class='br'>Health: {{hero.healthActUpgraded}}</p>
+          <p>Attack: {{hero.attackMinUpgraded}} - {{hero.attackMaxUpgraded}}</p>
+          <p>Defense: {{hero.defenseUpgraded}}</p>
+        </div>
+        <div class='col-4 inventory'>
+          <!-- inventory -->
+        </div>
+        <div class='col-4 itemDetails'>
+          <!-- itemDetails -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
