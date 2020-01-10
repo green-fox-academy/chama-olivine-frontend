@@ -20,7 +20,7 @@ export class LoginPageComponent implements OnInit {
       this.loginService.login(this.usernameInput, this.passwordInput).subscribe(
         response => {
           this.userID = response.id;
-          this.router.navigate([`/heroes-hall/${response.id}`]);
+          this.router.navigate([`/heroes-hall/`]);
         },
         error => {
           this.loginMessage = error;
@@ -30,5 +30,10 @@ export class LoginPageComponent implements OnInit {
       this.loginMessage = 'Please add a username and a password!';
     }
   }
+
+  navigateRegister() {
+    this.router.navigate([`register`]);
+  }
+
   ngOnInit() {}
 }
