@@ -1,22 +1,29 @@
-<nav class="navBar">
-  <div class="link" routerLink="/heroes-hall" routerLinkActive="active">
-    <p>Heroes hall</p>
+<nav class="navbar navbar-expand-sm desktop">
+  <a class="navbar-brand" routerLink="/heroes-hall" routerLinkActive="active">Heroes hall</a>
+  <div class="menu">
+    <ul class="navbar-nav mr-auto mt-lg-0" *ngIf="isSelected()">
+      <li class="navbar-text">
+        <p>{{heroName}}</p>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="navToPage('character')">Character</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="navToPage('inventory')">Inventory</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="navToPage('dungeon')">Dungeon</a>
+      </li>
+    </ul>
   </div>
-  <div class="menu link" *ngIf="isSelected()">
-    <div class="subLink">
-      <p>{{heroName}}</p>
-    </div>
-    <div class="subLink" (click)="navToPage('character')">
-      <p>Character</p>
-    </div>
-    <div class="subLink" (click)="navToPage('inventory')">
-      <p>Inventory</p>
-    </div>
-    <div class="subLink" (click)="navToPage('dungeon')">
-      <p>Dungeon</p>
-    </div>
+  <a class="nav-link logout" routerLink="/login" routerLinkActive="active" (click)="logout()">Logout</a>
+</nav>
+<nav class="navbar mobil">
+  <a class="heroes" routerLink="/heroes-hall" routerLinkActive="active"><img src="../../../assets/heroeshall.svg"></a>
+  <div class="menu" *ngIf="isSelected()">
+    <a class="item" (click)="navToPage('character')"><img src="../../../assets/character.svg"></a>
+    <a class="item" (click)="navToPage('inventory')"><img src="../../../assets/inventory.svg"></a>
+    <a class="item" (click)="navToPage('dungeon')"><img src="../../../assets/dungeon.svg"></a>
   </div>
-  <div class="logout link" routerLink="/login" routerLinkActive="active" (click)="logout()">
-    <p>Logout</p>
-  </div>
+  <a class="logout" routerLink="/login" routerLinkActive="active" (click)="logout()"><img src="../../../assets/logout.svg"></a>
 </nav>
