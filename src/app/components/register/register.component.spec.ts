@@ -1,3 +1,5 @@
+import { AvatarComponent } from './../avatar/avatar.component';
+import { HallComponent } from './../hall/hall.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegisterComponent } from './register.component';
@@ -33,7 +35,9 @@ describe('RegisterComponent', () => {
         DungeonMockComponent,
         InventoryMockComponent,
         NavBarComponent,
-        SingleHeroPageComponent],
+        SingleHeroPageComponent,
+        HallComponent,
+        AvatarComponent],
       imports: [
         BrowserModule,
         AppRoutingModule,
@@ -43,7 +47,7 @@ describe('RegisterComponent', () => {
         HttpClientTestingModule,
       ],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

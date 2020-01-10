@@ -8,25 +8,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent implements OnInit {
-
   usernameInput: string;
   passwordInput: string;
   loginMessage: string;
+  userID: number;
 
-  constructor(private loginService: LoginService, public router: Router) { }
+  constructor(private loginService: LoginService, public router: Router) {}
 
   sendLogin() {
     if (this.usernameInput && this.passwordInput) {
-      this.loginService.login(this.usernameInput, this.passwordInput).subscribe((response) => {
+      this.loginService.login(this.usernameInput, this.passwordInput).subscribe(
+        response => {
+          this.userID = response.id;
           this.router.navigate([`/heroes-hall/${response.id}`]);
-      },
-      error => {
-        this.loginMessage = error;
-        });
+        },
+        error => {
+          this.loginMessage = error;
+        }
+      );
     } else {
       this.loginMessage = 'Please add a username and a password!';
     }
   }
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

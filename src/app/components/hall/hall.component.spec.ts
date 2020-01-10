@@ -1,16 +1,15 @@
 import { AvatarComponent } from './../avatar/avatar.component';
-import { HallComponent } from './../hall/hall.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginPageComponent } from './login-page.component';
+import { HallComponent } from './hall.component';
+import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('LoginPageComponent', () => {
-  let component: LoginPageComponent;
-  let fixture: ComponentFixture<LoginPageComponent>;
+describe('HallComponent', () => {
+  let component: HallComponent;
+  let fixture: ComponentFixture<HallComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -20,17 +19,12 @@ describe('LoginPageComponent', () => {
         RouterTestingModule,
         HttpClientTestingModule
       ],
-      declarations: [
-        LoginPageComponent,
-        HallComponent,
-        AvatarComponent
-      ]
-    })
-      .compileComponents();
+      declarations: [HallComponent, AvatarComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginPageComponent);
+    fixture = TestBed.createComponent(HallComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
