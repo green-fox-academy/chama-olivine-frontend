@@ -1,14 +1,25 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { AvatarComponent } from './../avatar/avatar.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HallComponent } from "./hall.component";
+import { HallComponent } from './hall.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe("HallComponent", () => {
+describe('HallComponent', () => {
   let component: HallComponent;
   let fixture: ComponentFixture<HallComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HallComponent]
+      imports: [
+        FormsModule,
+        HttpClientModule,
+        RouterTestingModule,
+        HttpClientTestingModule
+      ],
+      declarations: [HallComponent, AvatarComponent]
     }).compileComponents();
   }));
 
@@ -18,7 +29,7 @@ describe("HallComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

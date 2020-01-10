@@ -32,7 +32,7 @@ export class HeroModel {
     this._attackmax = champion.attackmax;
     this._attackmin = champion.attackmin;
     this._defense = champion.defense;
-    this._inventory = champion.inventory;
+    this._inventory = champion.inventory || [];
     this._bigImage = champion.bigImage;
     this._smallImage = champion.smallImage;
     this._finalwords = champion.finalWords;

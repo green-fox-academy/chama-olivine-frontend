@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { LoginService } from "../../services/login-service/login-service.service";
-import { Router } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../../services/login-service/login-service.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: "app-login-page",
-  templateUrl: "./login-page.component.html",
-  styleUrls: ["./login-page.component.scss"]
+  selector: 'app-login-page',
+  templateUrl: './login-page.component.html',
+  styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent implements OnInit {
   usernameInput: string;
@@ -27,7 +27,7 @@ export class LoginPageComponent implements OnInit {
         }
       );
     } else {
-      this.loginMessage = "Please add a username and a password!";
+      this.loginMessage = 'Please add a username and a password!';
     }
   }
   ngOnInit() {}

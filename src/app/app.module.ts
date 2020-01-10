@@ -1,3 +1,4 @@
+import { HeroeshallService } from './services/heroes-service/heroeshall.service';
 import { SingleHeroPageComponent } from './components/single-hero-page/single-hero-page.component';
 import { HeroService } from './services/single-page/hero-Service';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,7 +21,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { HallComponent } from './components/hall/hall.component';
-
 
 @NgModule({
   declarations: [
@@ -47,6 +47,7 @@ import { HallComponent } from './components/hall/hall.component';
   providers: [
     ApiService,
     HeroService,
+    HeroeshallService
   ],
   bootstrap: [
     AppComponent

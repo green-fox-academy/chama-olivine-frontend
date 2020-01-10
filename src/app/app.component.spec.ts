@@ -1,6 +1,7 @@
-import { HallComponent } from "./components/hall/hall.component";
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { RouterTestingModule } from "@angular/router/testing";
+import { AvatarComponent } from './components/avatar/avatar.component';
+import { HallComponent } from './components/hall/hall.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
@@ -13,7 +14,7 @@ import { HelloWorldComponent } from './components/hello-world/hello-world.compon
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
-describe("AppComponent", () => {
+describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
@@ -33,7 +34,8 @@ describe("AppComponent", () => {
         HelloWorldComponent,
         NotFoundComponent,
         HomePageComponent,
-        HallComponent
+        HallComponent,
+        AvatarComponent
       ],
     }).compileComponents();
   }));
@@ -44,7 +46,7 @@ describe("AppComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
