@@ -18,6 +18,7 @@ import { DungeonMockComponent } from './components/dungeon-mock/dungeon-mock.com
 import { ApiService } from './services/api/api.service';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     RegisterComponent,
     routingComponents,
     SingleHeroPageComponent,
+    AvatarComponent,
   ],
   imports: [
     BrowserModule,

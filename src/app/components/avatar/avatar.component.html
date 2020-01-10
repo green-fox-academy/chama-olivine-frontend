@@ -1,0 +1,7 @@
+<div class="card" (click)="navigateHero(hero.id, hero.name)">
+  <img src="{{hero.smallImage}}" class="card-img-top" *ngIf="hero">
+  <div class="card-footer" *ngIf="hero">
+    <p class="card-title">{{hero.name}}</p>
+    <p class="card-title finalWords">"{{hero.finalWords}}"</p>
+  </div>
+</div>
