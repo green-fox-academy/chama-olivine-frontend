@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../../models/hero';
+import { HeroModel } from '../../models/heroModel';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,22 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./heroes-hall-mock.component.scss']
 })
 export class HeroesHallMockComponent implements OnInit {
-  hero: Hero;
-  myHeroes: Hero[];
+  hero: HeroModel;
+  myHeroes: HeroModel[];
 
   constructor(private router: Router) {
     this.myHeroes = [];
   }
 
   ngOnInit() {
-    this.addHero(5);
-  }
 
-  addHero(quantity: number) {
-    for (let i = 0; i <= quantity; i++) {
-      this.hero = new Hero(i, `Test${i}`);
-      this.myHeroes.push(this.hero);
-    }
   }
 
   navigateHero(id: number, name: string) {

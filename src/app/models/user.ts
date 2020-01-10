@@ -1,8 +1,8 @@
-import { Hero } from './hero';
+import { HeroModel } from './heroModel';
 
 export class User {
   userId: number;
   username: string;
   password: string;
-  heroes: Hero[];
+  heroes: HeroModel[];
 }
