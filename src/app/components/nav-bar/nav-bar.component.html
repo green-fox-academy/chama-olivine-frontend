@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm desktop">
+<nav class="navbar navbar-expand-sm fixed-top nav desktop">
   <a class="navbar-brand" routerLink="/heroes-hall" routerLinkActive="active">Heroes hall</a>
   <div class="menu">
     <ul class="navbar-nav mr-auto mt-lg-0" *ngIf="isSelected()">
@@ -18,7 +18,7 @@
   </div>
   <a class="nav-link logout" routerLink="/login" routerLinkActive="active" (click)="logout()">Logout</a>
 </nav>
-<nav class="navbar mobil">
+<nav class="navbar fixed-top nav mobil">
   <a class="heroes" routerLink="/heroes-hall" routerLinkActive="active"><img src="../../../assets/heroeshall.svg"></a>
   <div class="menu" *ngIf="isSelected()">
     <a class="item" (click)="navToPage('character')"><img src="../../../assets/character.svg"></a>

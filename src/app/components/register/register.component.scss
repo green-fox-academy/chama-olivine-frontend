@@ -2,7 +2,8 @@ form {
   padding-top: 20px;
 }
 
-.registerPage .row, .registerNav .navbar-text {
+.registerPage .row,
+.nav .navbar-text {
   margin: 0px;
 }
 
@@ -29,12 +30,12 @@ form {
   min-height: 73px;
 }
 
-.form-group > p {
+.form-group>p {
   color: red;
   font-size: 0.85em;
 }
 
-.bottomMessage > h5 {
+.bottomMessage>h5 {
   text-align: center;
   margin: 0px auto;
   padding: 1rem;
@@ -50,7 +51,9 @@ form {
   width: 49%;
 }
 
-.buttons > a, .form-group, .buttons {
+.buttons>a,
+.form-group,
+.buttons {
   margin: 0px auto;
 }
 
@@ -59,7 +62,7 @@ form {
   margin: 0px auto;
 }
 
-.registerNav a {
+.nav a {
   border: 1px solid black;
 }
 
@@ -67,20 +70,16 @@ form {
   .registerPage .card {
     width: 90%;
   }
-
-  .registerNav > li {
+  .nav>li {
     visibility: hidden;
     position: absolute;
   }
-
-  .registerNav {
+  .nav {
     justify-content: center;
   }
-
   h1 {
     font-size: 1.5em;
   }
-
   h5 {
     font-size: 1em;
   }

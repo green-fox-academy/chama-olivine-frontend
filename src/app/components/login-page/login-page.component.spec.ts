@@ -1,13 +1,13 @@
-import { AvatarComponent } from './../avatar/avatar.component';
-import { HallComponent } from './../hall/hall.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { LoginPageComponent } from './login-page.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+
 import { CreateHeroComponent } from '../create-hero/create-hero.component';
+import { LoginPageComponent } from './login-page.component';
+import { AvatarComponent } from './../avatar/avatar.component';
+import { HallComponent } from './../hall/hall.component';
 
 describe('LoginPageComponent', () => {
   let component: LoginPageComponent;
