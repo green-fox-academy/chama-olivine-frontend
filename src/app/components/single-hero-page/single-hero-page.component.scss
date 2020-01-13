@@ -19,7 +19,7 @@ p{
 }
 
 .btn-group {
-  height: 4vh;
+  height: 5vh;
 }
 
 .btn-group > * {
@@ -33,21 +33,13 @@ p{
   margin: 3vh;
 }
 
-.heroName > h3 {
+.heroName {
   margin-top: 3vh;
   font-size: 4vh;
 }
 
-.imageAndName{
-  height: 75vh;
-}
-
-img {
-  height: 60vh;
+.img-desktop {
   width: 100%;
-  background: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .Activity{
