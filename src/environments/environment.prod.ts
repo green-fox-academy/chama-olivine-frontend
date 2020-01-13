@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  hostname: 'https://angular-dungeoncrawler.herokuapp.com',
+  hostname: 'https://hero-manager-backend.herokuapp.com',
 };
