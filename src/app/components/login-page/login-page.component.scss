@@ -1,4 +1,5 @@
-.loginPage .row, .loginNav .navbar-text {
+.loginPage .row,
+.nav .navbar-text {
   margin: 0px;
 }
 
@@ -21,12 +22,13 @@
   box-shadow: 0px 0px 10px 0px #000;
 }
 
-.form-group > p {
+.form-group>p {
   color: red;
   font-size: 0.95em;
 }
 
-.form-group > h3, .bottomMessage > p {
+.form-group>h3,
+.bottomMessage>p {
   text-align: center;
   margin: 10px 0px;
 }
@@ -40,11 +42,12 @@
   width: 49%;
 }
 
-.buttons > a, .form-group {
+.buttons>a,
+.form-group {
   margin: 0px auto;
 }
 
-.form-group > h3 {
+.form-group>h3 {
   color: green;
 }
 
@@ -57,7 +60,7 @@
   margin-top: 0px;
 }
 
-.loginNav a {
+.nav a {
   border: 1px solid black;
 }
 
@@ -65,17 +68,14 @@
   .loginPage .card {
     width: 90%;
   }
-
-  .loginNav > li {
+  .nav>li {
     visibility: hidden;
     position: absolute;
-    color:green;
+    color: green;
   }
-
-  .loginNav {
+  .nav {
     justify-content: center;
   }
-
   h1 {
     font-size: 1.5em;
   }
