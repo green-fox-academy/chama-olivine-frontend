@@ -1,3 +1,5 @@
+import { AvatarComponent } from './components/avatar/avatar.component';
+import { HallComponent } from './components/hall/hall.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -11,6 +13,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HelloWorldComponent } from './components/hello-world/hello-world.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { CreateHeroComponent } from './components/create-hero/create-hero.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -32,6 +35,9 @@ describe('AppComponent', () => {
         HelloWorldComponent,
         NotFoundComponent,
         HomePageComponent,
+        HallComponent,
+        AvatarComponent,
+        CreateHeroComponent
       ],
     }).compileComponents();
   }));

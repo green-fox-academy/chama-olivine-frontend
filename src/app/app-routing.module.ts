@@ -1,3 +1,4 @@
+import { HallComponent } from './components/hall/hall.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -17,7 +18,8 @@ const routes: Routes = [
   {
     path: 'heroes-hall', component: HomePageComponent,
     children: [{
-      path: '', component: HeroesHallMockComponent,
+      // path: '', component: HeroesHallMockComponent,
+      path: '', component: HallComponent,
     }]
   }, {
     path: 'heroes-hall/:id', component: HomePageComponent,
@@ -40,4 +42,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [SingleHeroPageComponent];

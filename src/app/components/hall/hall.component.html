@@ -1,0 +1,4 @@
+<div class="row">
+  <app-create-hero class="card col-sm-2"></app-create-hero>
+  <app-avatar class="card col-sm-2" *ngFor="let hero of myHeroes" [hero]="hero" (click)="navigateHero(hero.id, hero.name)"></app-avatar>
+</div>
