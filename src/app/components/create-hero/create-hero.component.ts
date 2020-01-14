@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CreateHeroService } from '../../services/create-hero/create-hero.service';
 import { Router } from '@angular/router';
+import { HeroService } from 'src/app/services/heroservice/hero.service';
 
 @Component({
   selector: 'app-create-hero',
@@ -8,15 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-hero.component.scss']
 })
 export class CreateHeroComponent implements OnInit {
-  public heroNameInput: string;
-  userId = 1;
+  public heroNameInput = '';
   errMessage;
 
-  constructor(private create: CreateHeroService, public router: Router) { }
+  constructor(private create: HeroService, public router: Router) { }
 
   createHero() {
     if (this.heroNameInput.length <= 10 && this.heroNameInput.length >= 3) {
-      this.create.createNewHero(this.heroNameInput, this.userId.toString()).subscribe(() => {
+      this.create.createNewHero(this.heroNameInput).subscribe(() => {
         location.reload();
       },
         (err) => {

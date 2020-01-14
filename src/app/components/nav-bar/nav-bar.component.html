@@ -16,7 +16,7 @@
       </li>
     </ul>
   </div>
-  <a class="nav-link logout" routerLink="/login" routerLinkActive="active" (click)="logout()">Logout</a>
+  <a class="nav-link logout" (click)="auth.logout()">Logout</a>
 </nav>
 <nav class="navbar fixed-top nav mobil">
   <a class="heroes" routerLink="/heroes-hall" routerLinkActive="active"><img src="../../../assets/heroeshall.svg"></a>
@@ -25,5 +25,5 @@
     <a class="item" (click)="navToPage('inventory')"><img src="../../../assets/inventory.svg"></a>
     <a class="item" (click)="navToPage('dungeon')"><img src="../../../assets/dungeon.svg"></a>
   </div>
-  <a class="logout" routerLink="/login" routerLinkActive="active" (click)="logout()"><img src="../../../assets/logout.svg"></a>
+  <a class="logout" (click)="auth.logout()"><img src="../../../assets/logout.svg"></a>
 </nav>

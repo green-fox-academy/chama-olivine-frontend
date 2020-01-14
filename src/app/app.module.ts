@@ -1,4 +1,5 @@
-import { HttpClientModule } from '@angular/common/http';
+import { AuthinterceptorService } from './services/authinterceptor/authinterceptor.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -19,8 +20,8 @@ import { CreateHeroComponent } from './components/create-hero/create-hero.compon
 import { SingleHeroPageComponent } from './components/single-hero-page/single-hero-page.component';
 
 import { ApiService } from './services/api/api.service';
-import { HeroeshallService } from './services/heroes-service/heroeshall.service';
-import { HeroService } from './services/single-page/hero-Service';
+import { HeroService } from './services/heroservice/hero.service';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { HeroService } from './services/single-page/hero-Service';
   providers: [
     ApiService,
     HeroService,
-    HeroeshallService
+    {provide: HTTP_INTERCEPTORS, useClass: AuthinterceptorService, multi: true}
   ],
   bootstrap: [
     AppComponent

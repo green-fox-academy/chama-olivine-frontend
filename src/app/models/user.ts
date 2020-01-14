@@ -6,3 +6,8 @@ export class User {
   password: string;
   heroes: HeroModel[];
 }
+
+export interface ICurrentUser {
+  accessToken: string;
+  refreshToken: string;
+}

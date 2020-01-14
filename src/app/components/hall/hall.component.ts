@@ -1,7 +1,7 @@
-import { HeroeshallService } from './../../services/heroes-service/heroeshall.service';
 import { HeroModel } from './../../models/heroModel';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeroService } from 'src/app/services/heroservice/hero.service';
 
 @Component({
   selector: 'app-hall',
@@ -11,11 +11,9 @@ import { Router } from '@angular/router';
 export class HallComponent implements OnInit {
   hero: HeroModel;
   myHeroes: HeroModel[];
-  newList: any;
-  userId: string;
-  constructor(private router: Router, private srv: HeroeshallService) {
+
+  constructor(private router: Router, private srv: HeroService) {
     this.myHeroes = [];
-    this.userId = '1';
   }
 
   ngOnInit() {
@@ -23,7 +21,7 @@ export class HallComponent implements OnInit {
   }
 
   addHero() {
-    this.srv.getHeroes(this.userId).subscribe((res) => {
+    this.srv.getHeroes().subscribe((res) => {
       this.myHeroes = res;
     });
   }
