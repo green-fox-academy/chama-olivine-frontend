@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth/auth.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -9,9 +10,11 @@ import { Router } from '@angular/router';
 export class NavBarComponent implements OnInit {
   @Input() selectedHeroId: number;
   @Input() heroName: string;
+  auth: AuthService;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, auth: AuthService) {
     this.selectedHeroId = 0;
+    this.auth = auth;
   }
 
   ngOnInit() {
@@ -24,9 +27,5 @@ export class NavBarComponent implements OnInit {
   navToPage(page: string) {
     this.router.navigate([`/heroes-hall/${this.selectedHeroId}/${page}`, {id: this.selectedHeroId}],
     { queryParams: { name: this.heroName } });
-  }
-
-  logout() {
-    console.log('logged off'); // mock logout service call
   }
 }

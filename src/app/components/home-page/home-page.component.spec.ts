@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { NavBarComponent } from './../nav-bar/nav-bar.component';
 import { HomePageComponent } from './home-page.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('HomePageComponent', () => {
   let component: HomePageComponent;
@@ -11,7 +12,8 @@ describe('HomePageComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientTestingModule
       ],
       declarations: [HomePageComponent, NavBarComponent]
     })

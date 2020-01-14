@@ -1,5 +1,5 @@
+import { AuthService } from './../../services/auth/auth.service';
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../../services/login-service/login-service.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,19 +11,32 @@ export class LoginPageComponent implements OnInit {
   usernameInput: string;
   passwordInput: string;
   loginMessage: string;
-  userID: number;
+  idToken: number;
+  _acceptedResponses = [
+    'Incorrect Username and/or Password!',
+    'Please enter a Username and a Password!'
+  ];
 
-  constructor(private loginService: LoginService, public router: Router) {}
+  constructor(private authService: AuthService, public router: Router) {}
+
+  handleError(error) {
+    if (this._acceptedResponses.indexOf(error.error.message) > -1) {
+      return error.error.message;
+    } else {
+      return 'Unknown error, please try again later';
+    }
+  }
 
   sendLogin() {
     if (this.usernameInput && this.passwordInput) {
-      this.loginService.login(this.usernameInput, this.passwordInput).subscribe(
+      this.authService.login(this.usernameInput, this.passwordInput).subscribe(
         response => {
-          this.userID = response.id;
+          localStorage.setItem('access_token', response.accessToken);
+          localStorage.setItem('refresh_token', response.refreshToken);
           this.router.navigate([`/heroes-hall/`]);
         },
         error => {
-          this.loginMessage = error;
+          this.loginMessage = this.handleError(error);
         }
       );
     } else {

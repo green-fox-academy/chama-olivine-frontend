@@ -1,13 +1,19 @@
 export class LoginResponse {
 
-  private _id: number;
+  private _accessToken: string;
+  private _refreshToken: string;
 
-  constructor(id?: number) {
-    this._id = id;
+  constructor(accessToken?: string, refreshToken?: string) {
+    this._accessToken = accessToken;
+    this._refreshToken = refreshToken;
   }
 
-  get id(): number {
-    return this._id;
+  get accessToken(): string {
+    return this._accessToken;
+  }
+
+  get refreshToken(): string {
+    return this._refreshToken;
   }
 }
 

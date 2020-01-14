@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CreateHeroService } from './create-hero.service';
+import { AuthinterceptorService } from './authinterceptor.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('CreateHeroService', () => {
+describe('AuthinterceptorService', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [
       RouterTestingModule,
@@ -17,7 +17,7 @@ describe('CreateHeroService', () => {
   }));
 
   it('should be created', () => {
-    const service: CreateHeroService = TestBed.get(CreateHeroService);
+    const service: AuthinterceptorService = TestBed.get(AuthinterceptorService);
     expect(service).toBeTruthy();
   });
 });

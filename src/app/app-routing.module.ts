@@ -1,3 +1,4 @@
+import { AuthguardService } from './services/authguard/authguard.service';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -16,11 +17,13 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent},
   {
     path: 'heroes-hall', component: HomePageComponent,
+    canActivate: [AuthguardService],
     children: [{
       path: '', component: HallComponent,
     }]
   }, {
     path: 'heroes-hall/:id', component: HomePageComponent,
+    canActivate: [AuthguardService],
     children: [{
       path: 'character', component: SingleHeroPageComponent,
     }, {

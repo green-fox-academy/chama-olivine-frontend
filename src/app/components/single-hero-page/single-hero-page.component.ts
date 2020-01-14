@@ -1,7 +1,7 @@
-import { HeroService } from '../../services/single-page/hero-Service';
 import { HeroModel } from './../../models/heroModel';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HeroService } from 'src/app/services/heroservice/hero.service';
 
 @Component({
   selector: 'app-single-hero-page',
