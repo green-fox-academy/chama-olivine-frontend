@@ -1,15 +1,14 @@
-<div class='Container' *ngIf='hero'>
-  <div class='row'>
-    <div class='imageAndName col-3'>
-      <img src={{hero.bigImage}} />
-      <div class='heroName'>
-        <h3>{{hero.name}}</h3>
-      </div>
+<div class="Container" *ngIf="hero">
+  <div class="row">
+    <img class="d-block d-sm-none d-md-none img-responsive mx-auto w-25 " src={{hero.bigImage}} />
+    <div class="imageAndName col-sm-3">
+      <img class="d-none d-sm-block img-fluid img-desktop" src={{hero.bigImage}} />
+      <h3 class="heroName">{{hero.name}}</h3>
     </div>
-    <div class='col-9'>
-      <div class='row Activity'>
-        <p class='col-3'>Activity:</p>
-        <div class="btn-group btn-group-toggle col-9" data-toggle="buttons">
+    <div class="col-12 col-sm-9">
+      <div class="row Activity">
+        <p class="col-3 d-none d-sm-block">Activity:</p>
+        <div class="btn-group btn-group-toggle col-sm-12" data-toggle="buttons">
           <label class="btn btn-outline-secondary active">
             <input type="radio" name="options" id="option1" checked> Rest
           </label>
@@ -21,22 +20,18 @@
           </label>
         </div>
       </div>
-      <div class='row compartments'>
-        <div class='col-4 details'>
+      <div class="row compartments">
+        <div class="col-sm-4 details">
           <p>Level: {{hero.level}}</p>
-          <p class='br'>Exp needed: {{hero.neededExp}}</p>
+          <p class="br">Exp needed: {{hero.neededExp}}</p>
           <p>Stats:</p>
           <p>Max health: {{hero.healthMaxUpgraded}}</p>
-          <p class='br'>Health: {{hero.healthActUpgraded}}</p>
+          <p class="br">Health: {{hero.healthActUpgraded}}</p>
           <p>Attack: {{hero.attackMinUpgraded}} - {{hero.attackMaxUpgraded}}</p>
           <p>Defense: {{hero.defenseUpgraded}}</p>
         </div>
-        <div class='col-4 inventory'>
-          <!-- inventory -->
-        </div>
-        <div class='col-4 itemDetails'>
-          <!-- itemDetails -->
-        </div>
+        <div class="col-4 inventory d-none d-sm-block "> </div>
+        <div class="col-4 itemDetails d-none d-sm-block "> </div>
       </div>
     </div>
   </div>
