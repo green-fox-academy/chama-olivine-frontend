@@ -17,10 +17,12 @@ import { AvatarComponent } from './components/avatar/avatar.component';
 import { HallComponent } from './components/hall/hall.component';
 import { CreateHeroComponent } from './components/create-hero/create-hero.component';
 import { SingleHeroPageComponent } from './components/single-hero-page/single-hero-page.component';
+import { EnemyDetailComponent } from './components/enemy-detail/enemy-detail.component';
 
 import { ApiService } from './services/api/api.service';
 import { HeroeshallService } from './services/heroes-service/heroeshall.service';
 import { HeroService } from './services/single-page/hero-Service';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { HeroService } from './services/single-page/hero-Service';
     SingleHeroPageComponent,
     AvatarComponent,
     HallComponent,
-    CreateHeroComponent
+    CreateHeroComponent,
+    EnemyDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DungeonMockComponent } from './dungeon-mock.component';
+import { EnemyDetailComponent } from './../enemy-detail/enemy-detail.component';
 
 describe('DungeonMockComponent', () => {
   let component: DungeonMockComponent;
@@ -8,7 +9,7 @@ describe('DungeonMockComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DungeonMockComponent ]
+      declarations: [ DungeonMockComponent, EnemyDetailComponent ]
     })
     .compileComponents();
   }));
