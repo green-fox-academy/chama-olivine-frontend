@@ -18,6 +18,7 @@ import { InventoryMockComponent } from '../inventory-mock/inventory-mock.compone
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { SingleHeroPageComponent } from './../single-hero-page/single-hero-page.component';
 import { CreateHeroComponent } from '../create-hero/create-hero.component';
+import { EnemyDetailComponent } from './../enemy-detail/enemy-detail.component';
 
 describe('RegisterComponent', () => {
   let component: RegisterComponent;
@@ -37,7 +38,8 @@ describe('RegisterComponent', () => {
         SingleHeroPageComponent,
         HallComponent,
         AvatarComponent,
-        CreateHeroComponent
+        CreateHeroComponent,
+        EnemyDetailComponent
       ],
       imports: [
         BrowserModule,
