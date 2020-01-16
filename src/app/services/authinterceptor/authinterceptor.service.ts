@@ -30,6 +30,8 @@ export class AuthinterceptorService implements HttpInterceptor {
                 return this.handle403Error(req, next);
               case 401:
                 return <any>this.auth.logout();
+              default:
+                return throwError(err);
             }
           } else {
             return throwError(err);
