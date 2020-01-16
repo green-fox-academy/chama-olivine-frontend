@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  hostname: 'https://hero-manager-backend.herokuapp.com',
+  hostname: 'http://localhost:3000',
 };
 
 /*

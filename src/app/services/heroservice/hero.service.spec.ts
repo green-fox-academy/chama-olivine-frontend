@@ -1,7 +1,6 @@
 import { RouterTestingModule } from '@angular/router/testing';
 import { TestBed } from '@angular/core/testing';
-
-import { HeroeshallService } from './heroeshall.service';
+import { HeroService } from './hero.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -17,7 +16,7 @@ describe('HeroeshallService', () => {
   }));
 
   it('should be created', () => {
-    const service: HeroeshallService = TestBed.get(HeroeshallService);
+    const service: HeroService = TestBed.get(HeroService);
     expect(service).toBeTruthy();
   });
 });
