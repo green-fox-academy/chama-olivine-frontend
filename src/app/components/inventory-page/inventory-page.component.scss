@@ -29,3 +29,28 @@ h4 {
   text-transform: uppercase;
   margin: 2% 0;
 }
+
+@media only screen and (max-width: 577px) {
+  .desktop {
+    display: none;
+  }
+  
+  .Container {
+    display: flex;
+    height: 88vh;
+    margin: 0px;
+  }
+
+  .row {
+    width: 98%;
+    font-size: 2.5vh;
+  }
+
+  .sectionEquip {
+    height: 30%;
+  }
+
+  .sectionInventory {
+    height: 70%;
+  }
+}

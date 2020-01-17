@@ -6,3 +6,14 @@
 a {
   font-size: 1vw;
 }
+
+@media only screen and (max-width: 577px) {
+  .box {
+    max-height: 90%;
+    overflow-y: auto;
+  }
+
+  a {
+    font-size: 2.5vh;
+  }
+}
