@@ -10,7 +10,7 @@ import { HelloWorldComponent } from './components/hello-world/hello-world.compon
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
-import { InventoryMockComponent } from './components/inventory-mock/inventory-mock.component';
+import { InventoryComponent } from './components/inventory/inventory.component';
 import { DungeonMockComponent } from './components/dungeon-mock/dungeon-mock.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
@@ -19,11 +19,10 @@ import { HallComponent } from './components/hall/hall.component';
 import { CreateHeroComponent } from './components/create-hero/create-hero.component';
 import { SingleHeroPageComponent } from './components/single-hero-page/single-hero-page.component';
 import { EnemyDetailComponent } from './components/enemy-detail/enemy-detail.component';
-
 import { ApiService } from './services/api/api.service';
 import { HeroService } from './services/heroservice/hero.service';
-
-
+import { EquipButtonComponent } from './components/equip-button/equip-button.component';
+import { InventoryPageComponent } from './components/inventory-page/inventory-page.component';
 
 @NgModule({
   declarations: [
@@ -33,14 +32,16 @@ import { HeroService } from './services/heroservice/hero.service';
     LoginPageComponent,
     NavBarComponent,
     HomePageComponent,
-    InventoryMockComponent,
+    InventoryComponent,
     DungeonMockComponent,
     RegisterComponent,
     SingleHeroPageComponent,
     AvatarComponent,
     HallComponent,
     CreateHeroComponent,
-    EnemyDetailComponent
+    EnemyDetailComponent,
+    EquipButtonComponent,
+    InventoryPageComponent,
   ],
   imports: [
     BrowserModule,
