@@ -11,7 +11,6 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { InventoryComponent } from './components/inventory/inventory.component';
-import { DungeonMockComponent } from './components/dungeon-mock/dungeon-mock.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
@@ -26,6 +25,10 @@ import { InventoryPageComponent } from './components/inventory-page/inventory-pa
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 import { EventListComponent } from './components/event-list/event-list.component';
 import { HeroActionComponent } from './components/hero-action/hero-action.component';
+import { DungeonComponent } from './components/dungeon/dungeon.component';
+import { EnemyListMockComponent } from './components/enemy-list-mock/enemy-list-mock.component';
+
+
 
 @NgModule({
   declarations: [
@@ -36,7 +39,6 @@ import { HeroActionComponent } from './components/hero-action/hero-action.compon
     NavBarComponent,
     HomePageComponent,
     InventoryComponent,
-    DungeonMockComponent,
     RegisterComponent,
     SingleHeroPageComponent,
     AvatarComponent,
@@ -47,7 +49,9 @@ import { HeroActionComponent } from './components/hero-action/hero-action.compon
     InventoryPageComponent,
     ItemDetailComponent,
     EventListComponent,
-    HeroActionComponent
+    HeroActionComponent,
+    DungeonComponent,
+    EnemyListMockComponent,
   ],
   imports: [
     BrowserModule,
