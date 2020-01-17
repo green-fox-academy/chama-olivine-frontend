@@ -23,6 +23,7 @@ import { ApiService } from './services/api/api.service';
 import { HeroService } from './services/heroservice/hero.service';
 import { EquipButtonComponent } from './components/equip-button/equip-button.component';
 import { InventoryPageComponent } from './components/inventory-page/inventory-page.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { InventoryPageComponent } from './components/inventory-page/inventory-pa
     EnemyDetailComponent,
     EquipButtonComponent,
     InventoryPageComponent,
+    ItemDetailComponent,
   ],
   imports: [
     BrowserModule,
