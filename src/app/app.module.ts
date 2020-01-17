@@ -24,6 +24,8 @@ import { HeroService } from './services/heroservice/hero.service';
 import { EquipButtonComponent } from './components/equip-button/equip-button.component';
 import { InventoryPageComponent } from './components/inventory-page/inventory-page.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
+import { EventListComponent } from './components/event-list/event-list.component';
+import { HeroActionComponent } from './components/hero-action/hero-action.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { ItemDetailComponent } from './components/item-detail/item-detail.compon
     EquipButtonComponent,
     InventoryPageComponent,
     ItemDetailComponent,
+    EventListComponent,
+    HeroActionComponent
   ],
   imports: [
     BrowserModule,
