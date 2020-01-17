@@ -1,14 +1,14 @@
-.health > p {
+.btn {
   font-size: 3vh;
-}
-
-.health > button {
-  font-size: 3vw;
   border: 1px solid #000000;
   color: #000000;
   font-weight: bold;
 }
 
-.healthNum{
-  text-align: center;
+.btn-dark:focus {
+  color: black;
+}
+
+.btn-dark:hover {
+  color: black;
 }

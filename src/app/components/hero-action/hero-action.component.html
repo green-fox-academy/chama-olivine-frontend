@@ -1,2 +1,5 @@
-<p>Hero's health: 5/22</p>
-<button>Kill something</button>
+<div class= "health"  *ngIf="hero">
+  <p class="healthNum">{{ hero.name }}'s health: {{ hero.healthmax }}/{{ hero.healthact }}</p>
+  <app-dungeon-button (click)="changeState()" [currentState]="toState" [currentAction]="action"></app-dungeon-button>
+  <ng-template [ngIf]="_decider == true"><input  type="text" class="form-control line end" placeholder="Final words" [(ngModel)]="finalWordsInput"></ng-template>
+</div>
