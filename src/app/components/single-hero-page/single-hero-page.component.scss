@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.compartments > div{
-  height: 65vh;
-}
-
 .details, .Activity > p {
   font-size: 3vh;
 }
@@ -20,6 +16,8 @@ p{
 
 .btn-group {
   height: 5vh;
+  display: flex;
+  flex-direction: row;
 }
 
 .btn-group > * {
@@ -43,5 +41,10 @@ p{
 }
 
 .Activity{
-  height: 10vh;
+  align-items: center;
+  font-size: 3vw;
+}
+
+.progress {
+  margin-top: 10px;
 }
