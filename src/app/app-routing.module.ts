@@ -4,12 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
-import { DungeonMockComponent } from './components/dungeon-mock/dungeon-mock.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SingleHeroPageComponent } from './components/single-hero-page/single-hero-page.component';
 import { HallComponent } from './components/hall/hall.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { InventoryPageComponent } from './components/inventory-page/inventory-page.component';
+import { DungeonComponent } from './components/dungeon/dungeon.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -29,7 +29,7 @@ const routes: Routes = [
     }, {
       path: 'inventory-page', component: InventoryPageComponent,
     }, {
-      path: 'dungeon', component: DungeonMockComponent,
+      path: 'dungeon', component: DungeonComponent,
     }]
   },
   { path: 'register', component: RegisterComponent},

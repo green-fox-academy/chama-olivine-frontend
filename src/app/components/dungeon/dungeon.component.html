@@ -1,0 +1,16 @@
+<div *ngIf="dungeon" class="container">
+  <div class="row">
+    <div class=" col-sm-3 dungeonInfo">
+      <img src={{dungeon.image}} class="d-none d-sm-block img-fluid img-desktop" />
+      <h2 class="dungeonName">{{dungeon.name}}</h2>
+    </div>
+    <div class="col-sm-3 order-sm-12">
+      <app-hero-action></app-hero-action>
+      <h3 class="eventsHeader">Events:</h3>
+      <app-event-list [events]="_events"></app-event-list>
+    </div>
+    <app-enemy-list-mock class="col-sm-3" [dungeon]="_dungeon" (_valueChange)="showSelectedItem($event)">
+    </app-enemy-list-mock>
+    <app-enemy-detail class="col-sm-3" [obstacle]="_selectedObstacle"></app-enemy-detail>
+  </div>
+</div>
