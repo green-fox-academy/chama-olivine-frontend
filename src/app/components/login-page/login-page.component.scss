@@ -42,6 +42,10 @@
   width: 49%;
 }
 
+.buttons>a {
+  cursor: pointer;
+}
+
 .buttons>a,
 .form-group {
   margin: 0px auto;
