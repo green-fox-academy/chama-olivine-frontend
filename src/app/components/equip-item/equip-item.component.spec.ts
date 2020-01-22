@@ -1,4 +1,4 @@
-describe('dummy test', () => {
+describe('dummytest', () => {
   it('should create', () => {
     expect(true).toBeTruthy();
   });

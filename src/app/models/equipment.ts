@@ -15,6 +15,10 @@ export class Equipment {
     this._active = equipment._active;
   }
 
+  get id(): number {
+    return this._id;
+  }
+
   get name(): string {
     return this._name;
   }
@@ -29,5 +33,9 @@ export class Equipment {
 
   get active(): boolean {
     return this._active;
+  }
+
+  set setActive(e) {
+    this._active = e;
   }
 }
