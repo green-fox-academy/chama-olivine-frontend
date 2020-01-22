@@ -9,8 +9,8 @@
       <h3 class="eventsHeader">Events:</h3>
       <app-event-list [events]="_events"></app-event-list>
     </div>
-    <app-enemy-list-mock class="col-sm-3" [dungeon]="_dungeon" (_valueChange)="showSelectedItem($event)">
-    </app-enemy-list-mock>
+    <app-enemy-list class="col-sm-3" [dungeon]="_dungeon" (_valueChange)="showSelectedItem($event)">
+    </app-enemy-list>
     <app-enemy-detail class="col-sm-3" [obstacle]="_selectedObstacle"></app-enemy-detail>
   </div>
 </div>

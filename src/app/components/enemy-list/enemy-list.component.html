@@ -1,0 +1,12 @@
+<div class='container'>
+  <div class="box list-group list-group-flush" id="list-tab" role="tablist">
+    <a
+      class="listItem list-group-item list-group-item-action"
+      *ngFor="let item of dungeon.obstacles"
+      id="list-wep1-list"
+      data-toggle="list"
+      href="#item"
+      (click)="selectObstacle(item)"
+      ><div class="obstacleInd">{{item.label}}</div>{{item.name}}</a>
+  </div>
+</div>

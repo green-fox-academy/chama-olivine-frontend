@@ -25,7 +25,8 @@ export class DungeonService {
 
     const request = this.http.get(`${environment.hostname}/dungeon/`, options);
     return request.pipe(map(res => {
-      return new Dungeon(res['body']);
+      const dungeon = new Dungeon(res['body']);
+      return dungeon;
     }),
       catchError(err => {
         return throwError(err);
