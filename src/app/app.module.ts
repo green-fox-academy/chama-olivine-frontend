@@ -26,7 +26,7 @@ import { ItemDetailComponent } from './components/item-detail/item-detail.compon
 import { EventListComponent } from './components/event-list/event-list.component';
 import { HeroActionComponent } from './components/hero-action/hero-action.component';
 import { DungeonComponent } from './components/dungeon/dungeon.component';
-import { EnemyListMockComponent } from './components/enemy-list-mock/enemy-list-mock.component';
+import { EnemyListComponent } from './components/enemy-list/enemy-list.component';
 
 
 
@@ -51,7 +51,7 @@ import { EnemyListMockComponent } from './components/enemy-list-mock/enemy-list-
     EventListComponent,
     HeroActionComponent,
     DungeonComponent,
-    EnemyListMockComponent,
+    EnemyListComponent,
   ],
   imports: [
     BrowserModule,

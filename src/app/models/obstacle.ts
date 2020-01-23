@@ -7,6 +7,7 @@ export class Obstacle {
     this.attackmax = 1;
     this.defense = 1;
     this.experience = 1;
+    this.label = '';
   }
 
   name: string;
@@ -15,4 +16,6 @@ export class Obstacle {
   attackmax: number;
   defense: number;
   experience: number;
+  label: string;
+
 }

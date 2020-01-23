@@ -14,12 +14,12 @@ export class DungeonComponent {
   private _dungeon: Dungeon;
   private _heroId: number;
   private _selectedObstacle: Obstacle;
-  private _events: string[];
 
   constructor(private dungeonService: DungeonService, private _route: ActivatedRoute) {
     this._heroId = Number(this._route.snapshot.paramMap.get('id'));
     this.dungeonService.getDungeon(this._heroId).subscribe(response => {
       this._dungeon = response;
+      this._dungeon.classifyObstacles();
     });
   }
 
