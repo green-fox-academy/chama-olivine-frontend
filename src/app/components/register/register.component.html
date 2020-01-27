@@ -7,7 +7,7 @@
 <main class="my-form registerPage">
   <div class="row justify-content-center">
     <div class="card">
-      <h1 class="card-header text-center">Register</h1>
+      <h1 class="card-header text-center">Sign up</h1>
       <form name="my-form">
         <div class="form-group col-sm-10">
           <input type="text" name="username" class="form-control" [(ngModel)]="username" placeholder="Username" required>
@@ -23,7 +23,7 @@
         </div>
         <div class=" buttons col-sm-10">
           <button type="submit" class="btn btn-secondary" (click)="cancelRegistration()">Cancel</button>
-          <button type="submit" class="btn btn-primary" (click)="registerUser()">Register</button>
+          <button type="submit" class="btn btn-primary" (click)="registerUser()">Sign up</button>
         </div>
         <div class="col-sm-10 bottomMessage" role="alert">
           <h5 class="alert-heading">{{messageSuccess}}</h5>
