@@ -1,7 +1,14 @@
-<div class="card">
-  <img src="{{hero.smallImage}}" class="card-img-top" *ngIf="hero">
-  <div class="card-footer" *ngIf="hero">
+<div class="card" *ngIf="hero">
+  <div class="card">
+    <img src="{{hero.smallImage}}" class="card-img-top">
+    <img src="{{this.currentLabel}}" class="card-img-overlay">
+  </div>
+  <div class="progress">
+    <div [class]="this.progressClass" role="progressbar" [style.width]="hero.healthActPercentage + '%'"
+      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="card-footer">
     <p class="card-title">{{hero.name}}</p>
-    <p class="card-title finalWords">"{{hero.finalWords}}"</p>
+    <p *ngIf="hero.finalWords" class="card-title finalWords">"{{hero.finalWords}}"</p>
   </div>
 </div>

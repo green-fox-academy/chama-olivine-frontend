@@ -21,6 +21,9 @@ export class HeroModel {
   private _attackMaxUpgraded: number;
   private _attackMinUpgraded: number;
   private _defenseUpgraded: number;
+  private _healthActPercentage: number;
+  _activityType: string;
+
 
   constructor(champion) {
     this._id = champion.id;
@@ -42,6 +45,8 @@ export class HeroModel {
     this._attackMinUpgraded = this.attackMinUpgrade();
     this._defenseUpgraded = this.defenseUpgrade();
     this._neededExp = this.calcNeededExp(this.level);
+    this._healthActPercentage = this.calcHealthActPercentage();
+    this._activityType = champion._activityType || 'train';
   }
 
   get id(): number {
@@ -120,6 +125,10 @@ export class HeroModel {
     return this._finalwords;
   }
 
+  get healthActPercentage(): number {
+    return this._healthActPercentage;
+  }
+
   private calcNeededExp(level): number {
     let calced = 0;
     for (let i = 0; i <= level + 1; i++) {
@@ -171,5 +180,9 @@ export class HeroModel {
       if (item['attributeName'] === 'defense') { return item['value']; }
     }));
     return this._defense + defenseModifiers;
+  }
+
+  private calcHealthActPercentage() {
+    return Math.round(this.healthActUpgraded / (this.healthMaxUpgraded / 100));
   }
 }

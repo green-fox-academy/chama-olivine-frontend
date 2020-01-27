@@ -1,11 +1,14 @@
 .card-title {
-  margin: 2% auto;
+  margin: auto;
   font-size: 1.2rem;
 }
 
 .card-footer {
   padding: 0%;
   text-align: center;
+  height: 10vh;
+  display: flex;
+  flex-flow: column;
 }
 
 .card-img-top-plus {
@@ -17,4 +20,12 @@
 .finalWords {
   font-size: 1rem;
   font-style: italic;
+}
+
+.card-img-overlay{
+  height: 5vh;
+  margin: 3px;
+  padding: 0;
+  bottom: 0;
+  top: auto;
 }
