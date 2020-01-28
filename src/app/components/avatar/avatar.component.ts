@@ -43,9 +43,9 @@ export class AvatarComponent implements OnInit {
   }
 
   labelActivity() {
-    if (this.hero._activityType === 'train') {
+    if (this.hero._idleAction.type === 'train') {
       this.currentLabel = this.icons.train;
-    } else if (this.hero._activityType === 'scout') {
+    } else if (this.hero._idleAction.type === 'scout') {
       this.currentLabel = this.icons.scout;
     } else {
       this.currentLabel = this.icons.rest;

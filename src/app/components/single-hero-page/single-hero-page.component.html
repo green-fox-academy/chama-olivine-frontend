@@ -13,11 +13,11 @@
         <div class="col-12 col-sm-8">
           <div class="row btn-group btn-group-toggle" data-toggle="buttons">
             <ng-container *ngFor="let option of options;">
-              <label *ngIf="hero._activityType === option.type" class="btn btn-outline-secondary active" data-placement="top"
+              <label *ngIf="hero._idleAction.type === option.type" class="btn btn-outline-secondary active" data-placement="top"
                 [title]="option.description">
                 <input type="radio" name="options" [value]="option.type" (click)="chooseActivity()" checked> {{option.type}}
               </label>
-              <label *ngIf="hero._activityType !== option.type" class="btn btn-outline-secondary" data-placement="top"
+              <label *ngIf="hero._idleAction.type!== option.type" class="btn btn-outline-secondary" data-placement="top"
                 [title]="option.description">
                 <input type="radio" name="options" [value]="option.type" (click)="chooseActivity()"> {{option.type}}
               </label>
@@ -25,8 +25,8 @@
           </div>
           <div class="progress row">
             <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar"
-              [style.width]="hero.activityPercent + '%'">
-              {{hero._activityPercent}}%
+              [style.width]="percent + '%'">
+              {{percent}}%
             </div>
           </div>
         </div>

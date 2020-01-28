@@ -1,5 +1,5 @@
 import { HeroModel } from './../../models/heroModel';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeroService } from 'src/app/services/heroservice/hero.service';
 
@@ -8,9 +8,10 @@ import { HeroService } from 'src/app/services/heroservice/hero.service';
   templateUrl: './hall.component.html',
   styleUrls: ['./hall.component.scss']
 })
-export class HallComponent implements OnInit {
+export class HallComponent implements OnInit, OnDestroy {
   hero: HeroModel;
   myHeroes: HeroModel[];
+  timer: any;
 
   constructor(private router: Router, private srv: HeroService) {
     this.myHeroes = [];
@@ -20,10 +21,15 @@ export class HallComponent implements OnInit {
     this.addHero();
   }
 
+  ngOnDestroy(): void {
+    clearInterval(this.timer);
+  }
+
   addHero() {
-    this.srv.getHeroes().subscribe((res) => {
-      this.myHeroes = res;
-    });
+    this.srv.getHeroes().subscribe((res) => this.myHeroes = res);
+    this.timer = setInterval(() => {
+      this.srv.getHeroes().subscribe((res) => this.myHeroes = res);
+    }, 3600000);
   }
 
   navigateHero(id: number, name: string) {
