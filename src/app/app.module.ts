@@ -1,6 +1,8 @@
+import { DungeonActionsService } from './services/dungeon-actions/dungeon-actions.service';
 import { AuthinterceptorService } from './services/authinterceptor/authinterceptor.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +30,8 @@ import { HeroActionComponent } from './components/hero-action/hero-action.compon
 import { DungeonComponent } from './components/dungeon/dungeon.component';
 import { EnemyListComponent } from './components/enemy-list/enemy-list.component';
 import { EquippedInventoryComponent } from './components/equipped-inventory/equipped-inventory.component';
+import { DungeonButtonComponent } from './components/dungeon-button/dungeon-button.component';
+
 
 @NgModule({
   declarations: [
@@ -51,10 +55,12 @@ import { EquippedInventoryComponent } from './components/equipped-inventory/equi
     HeroActionComponent,
     DungeonComponent,
     EnemyListComponent,
-    EquippedInventoryComponent
+    EquippedInventoryComponent,
+    DungeonButtonComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
@@ -62,6 +68,7 @@ import { EquippedInventoryComponent } from './components/equipped-inventory/equi
   providers: [
     ApiService,
     HeroService,
+    DungeonActionsService,
     {provide: HTTP_INTERCEPTORS, useClass: AuthinterceptorService, multi: true}
   ],
   bootstrap: [

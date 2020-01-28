@@ -1,5 +1,4 @@
 export class Obstacle {
-
   constructor() {
     this.name = 'fartbucket';
     this.healthmax = 1;
@@ -9,7 +8,6 @@ export class Obstacle {
     this.experience = 1;
     this.label = '';
   }
-
   name: string;
   healthmax: number;
   attackmin: number;

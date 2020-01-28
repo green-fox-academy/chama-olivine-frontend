@@ -1,11 +1,12 @@
-<div *ngIf="dungeon" class="container">
+<div *ngIf="dungeon" class="Container">
   <div class="row">
+    <img class="d-block d-sm-none d-md-none img-responsive mx-auto w-25 " src={{dungeon.image}} />
     <div class=" col-sm-3 dungeonInfo">
-      <img src={{dungeon.image}} class="d-none d-sm-block img-fluid img-desktop" />
+      <img class="d-none d-sm-block img-fluid img-desktop" src={{dungeon.image}} />
       <h2 class="dungeonName">{{dungeon.name}}</h2>
     </div>
     <div class="col-sm-3 order-sm-12">
-      <app-hero-action></app-hero-action>
+      <app-hero-action [hero]="_hero" [dungeon]="_dungeon" (_data)="onProgress($event)"></app-hero-action>
       <h3 class="eventsHeader">Events:</h3>
       <app-event-list [events]="_events"></app-event-list>
     </div>
