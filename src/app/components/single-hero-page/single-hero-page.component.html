@@ -1,23 +1,34 @@
 <div class="Container" *ngIf="hero">
   <div class="row">
-    <img class="d-block d-sm-none d-md-none img-responsive mx-auto w-25 " src={{hero.bigImage}} />
+    <img class="d-block d-sm-none d-md-none img-responsive mx-auto w-25" src={{hero.bigImage}} />
     <div class="imageAndName col-sm-3">
       <img class="d-none d-sm-block img-fluid img-desktop" src={{hero.bigImage}} />
       <h3 class="heroName">{{hero.name}}</h3>
     </div>
     <div class="col-12 col-sm-9">
       <div class="row Activity">
-        <p class="col-3 d-none d-sm-block">Activity:</p>
-        <div class="btn-group btn-group-toggle col-sm-12" data-toggle="buttons">
-          <label class="btn btn-outline-secondary active">
-            <input type="radio" name="options" id="option1" checked> Rest
-          </label>
-          <label class="btn btn-outline-secondary">
-            <input type="radio" name="options" id="option2"> Train
-          </label>
-          <label class="btn btn-outline-secondary">
-            <input type="radio" name="options" id="option3"> Scout
-          </label>
+        <div class="col-4 d-none d-sm-block">
+          <p class="col-3 ">Activity:</p>
+        </div>
+        <div class="col-12 col-sm-8">
+          <div class="row btn-group btn-group-toggle" data-toggle="buttons">
+            <ng-container *ngFor="let option of options;">
+              <label *ngIf="hero._activityType === option.type" class="btn btn-outline-secondary active" data-placement="top"
+                [title]="option.description">
+                <input type="radio" name="options" [value]="option.type" (click)="chooseActivity()" checked> {{option.type}}
+              </label>
+              <label *ngIf="hero._activityType !== option.type" class="btn btn-outline-secondary" data-placement="top"
+                [title]="option.description">
+                <input type="radio" name="options" [value]="option.type" (click)="chooseActivity()"> {{option.type}}
+              </label>
+            </ng-container>
+          </div>
+          <div class="progress row">
+            <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar"
+              [style.width]="hero.activityPercent + '%'">
+              {{hero._activityPercent}}%
+            </div>
+          </div>
         </div>
       </div>
       <div class="row compartments">
