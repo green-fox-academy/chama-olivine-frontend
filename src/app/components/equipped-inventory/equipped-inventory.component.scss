@@ -1,0 +1,27 @@
+.equipped-items {
+  span {
+    display: block;
+    font-size: 1vw;
+  }
+
+  .item-title {
+    text-decoration: underline;
+    margin-top: 15px;
+  }
+
+  .item-name {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .item-name-no-pointer {
+    display: inline-block;
+  }
+
+  .item-none {
+    display: inline-block;
+  }
+
+  .active {text-decoration: underline;}
+
+}

@@ -5,7 +5,7 @@
       <h4 class="characterName">{{ _hero.name }}</h4>
     </div>
     <div class="col-sm-3 section desktop">
-      <!-- <app-equipped-inventory *ngIf="hero" (equippedEmitter)="equippedItemClick($event)" [hero]="hero"></app-equipped-inventory> -->
+      <app-equipped-inventory *ngIf="hero" (equippedEmitter)="showSelectedItem($event)" [hero]="hero"></app-equipped-inventory>
     </div>
     <div class="col-sm-3 sectionInventory">
       <app-inventory [inventory]="_hero.inventory" (valueChange)="showSelectedItem($event)"></app-inventory>

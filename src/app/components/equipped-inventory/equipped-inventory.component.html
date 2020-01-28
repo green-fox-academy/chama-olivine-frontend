@@ -1,0 +1,10 @@
+<div class="equipped-items" *ngIf="hero && hero.inventory">
+  <h4>Gear:</h4>
+  <span *ngFor="let item of itemsEquipped; let i= index">
+    <h5 *ngIf="i < 1"> Weapons: </h5>
+    <span class="item-name-no-pointer">{{item.itemTitle}}:</span>
+    <span class="item-name" *ngIf="item.itemObject.name" [ngClass]="{active: isActive(item.itemObject)}" (click)="itemClicked(item.itemObject)">{{item.itemObject.name}}</span>
+    <span class="item-name-no-pointer" *ngIf="!item.itemObject.name" (click)="itemClicked(item.itemObject)">-</span>
+    <h5 *ngIf="i === 1">Protection: </h5>
+  </span>
+</div>

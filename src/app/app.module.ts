@@ -27,8 +27,7 @@ import { EventListComponent } from './components/event-list/event-list.component
 import { HeroActionComponent } from './components/hero-action/hero-action.component';
 import { DungeonComponent } from './components/dungeon/dungeon.component';
 import { EnemyListComponent } from './components/enemy-list/enemy-list.component';
-
-
+import { EquippedInventoryComponent } from './components/equipped-inventory/equipped-inventory.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +51,7 @@ import { EnemyListComponent } from './components/enemy-list/enemy-list.component
     HeroActionComponent,
     DungeonComponent,
     EnemyListComponent,
+    EquippedInventoryComponent
   ],
   imports: [
     BrowserModule,
