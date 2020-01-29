@@ -14,6 +14,7 @@ export class AvatarComponent implements OnInit {
   progressClass: string;
   icons: ActivityIcons;
   currentLabel: string;
+  currentLabelInfo: string;
 
   constructor(private router: Router) {
     this.icons = {
@@ -45,10 +46,13 @@ export class AvatarComponent implements OnInit {
   labelActivity() {
     if (this.hero._idleAction.type === 'train') {
       this.currentLabel = this.icons.train;
+      this.currentLabelInfo = 'Your hero is a train and does nothing at the moment';
     } else if (this.hero._idleAction.type === 'scout') {
       this.currentLabel = this.icons.scout;
+      this.currentLabelInfo = 'Your hero is scouting the current dungeon\'s monsters.';
     } else {
       this.currentLabel = this.icons.rest;
+      this.currentLabelInfo = 'Your hero is gaining some HP while resting.';
     }
   }
 }
