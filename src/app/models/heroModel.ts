@@ -23,8 +23,7 @@ export class HeroModel {
   private _defenseUpgraded: number;
   private _healthActPercentage: number;
   private _activeItems: Equipment[];
-  _activityType: string;
-  private _activityPercent: number;
+  _idleAction: any;
 
   constructor(champion) {
     this._id = champion.id;
@@ -48,8 +47,7 @@ export class HeroModel {
     this._neededExp = this.calcNeededExp(this.level);
     this._healthActPercentage = this.calcHealthActPercentage();
     this._activeItems = this.activeEquipments();
-    this._activityType = champion.actionType || 'rest';
-    this._activityPercent = champion.actionPercent || 0;
+    this._idleAction = champion.idleAction;
   }
 
   get id(): number {
@@ -130,10 +128,6 @@ export class HeroModel {
 
   get healthActPercentage(): number {
     return this._healthActPercentage;
-  }
-
-  get activityPercent(): number {
-    return this._activityPercent;
   }
 
   private calcNeededExp(level): number {
