@@ -1,7 +1,8 @@
 <div class="card" *ngIf="hero">
   <div class="card">
-    <img src="{{hero.smallImage}}" class="card-img-top">
-    <img src="{{this.currentLabel}}" class="card-img-overlay">
+    <img *ngIf="hero.finalWords" src="{{hero.smallImage}}" class="card-img-top greyImage">
+    <img *ngIf="!hero.finalWords" src="{{hero.smallImage}}" class="card-img-top">
+    <img src="{{this.currentLabel}}" class="card-img-overlay" data-toggle="tooltip" data-placement="top" title="{{this.currentLabelInfo}}">
   </div>
   <div class="progress">
     <div [class]="this.progressClass" role="progressbar" [style.width]="hero.healthActPercentage + '%'"
