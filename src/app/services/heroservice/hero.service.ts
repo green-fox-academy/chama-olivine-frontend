@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { HeroModel } from '../../models/heroModel';
 import { environment } from 'src/environments/environment';
 import { Observable, throwError } from 'rxjs';
@@ -53,5 +53,18 @@ export class HeroService {
         return throwError(this.handleError());
       })
     );
+  }
+
+  public equipItem(itemId: number, actionType: string): Observable<any> {
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    });
+    const options = {
+      headers
+    };
+    const request = this.http.post(`${environment.hostname}/hero/use`, {  actionType: actionType, id: itemId }, options);
+    return request;
   }
 }

@@ -22,7 +22,6 @@ import { SingleHeroPageComponent } from './components/single-hero-page/single-he
 import { EnemyDetailComponent } from './components/enemy-detail/enemy-detail.component';
 import { ApiService } from './services/api/api.service';
 import { HeroService } from './services/heroservice/hero.service';
-import { EquipButtonComponent } from './components/equip-button/equip-button.component';
 import { InventoryPageComponent } from './components/inventory-page/inventory-page.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 import { EventListComponent } from './components/event-list/event-list.component';
@@ -31,7 +30,7 @@ import { DungeonComponent } from './components/dungeon/dungeon.component';
 import { EnemyListComponent } from './components/enemy-list/enemy-list.component';
 import { EquippedInventoryComponent } from './components/equipped-inventory/equipped-inventory.component';
 import { DungeonButtonComponent } from './components/dungeon-button/dungeon-button.component';
-
+import { EquipItemComponent } from './components/equip-item/equip-item.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +47,6 @@ import { DungeonButtonComponent } from './components/dungeon-button/dungeon-butt
     HallComponent,
     CreateHeroComponent,
     EnemyDetailComponent,
-    EquipButtonComponent,
     InventoryPageComponent,
     ItemDetailComponent,
     EventListComponent,
@@ -56,7 +54,8 @@ import { DungeonButtonComponent } from './components/dungeon-button/dungeon-butt
     DungeonComponent,
     EnemyListComponent,
     EquippedInventoryComponent,
-    DungeonButtonComponent
+    DungeonButtonComponent,
+    EquipItemComponent
   ],
   imports: [
     BrowserModule,
