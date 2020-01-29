@@ -11,7 +11,7 @@
       <app-inventory [inventory]="_hero.inventory" (valueChange)="showSelectedItem($event)"></app-inventory>
     </div>
     <div class="col-sm-3 sectionEquip">
-      <app-equip-item [selectedItem]="selectedItem" (itemEquipped)="equipThis($event)"></app-equip-item>
+      <app-equip-item [selectedItem]="selectedItem" [heroId]="_hero.id" (itemEquipped)="equipThis($event)"></app-equip-item>
       <app-item-detail [selectedItem]="selectedItem"></app-item-detail>
     </div>
   </div>
