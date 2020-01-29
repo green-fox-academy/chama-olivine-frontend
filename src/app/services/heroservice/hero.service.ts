@@ -25,8 +25,12 @@ export class HeroService {
     );
   }
 
-  createNewHero(heroName: string) {
-    return this.http.post(`${environment.hostname}/hero`, { name: heroName });
+  createNewHero(heroName: string, smallImage: string, bigImage: string) {
+    return this.http.post(`${environment.hostname}/hero`, {
+      name: heroName,
+      smallImage: smallImage,
+      bigImage: bigImage
+    });
   }
 
   handleError() {
@@ -64,7 +68,7 @@ export class HeroService {
     const options = {
       headers
     };
-    const request = this.http.post(`${environment.hostname}/hero/use`, {  actionType: actionType, id: itemId }, options);
+    const request = this.http.post(`${environment.hostname}/hero/use`, { actionType: actionType, id: itemId }, options);
     return request;
   }
 }

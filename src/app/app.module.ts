@@ -62,7 +62,7 @@ import { EquipItemComponent } from './components/equip-item/equip-item.component
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     ApiService,

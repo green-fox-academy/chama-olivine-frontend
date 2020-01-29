@@ -1,5 +1,17 @@
 <div class="card-body">
   <input type="text" class="form-control line" placeholder="Character name" [(ngModel)]="heroNameInput">
+  <div class="imgButtonsCont">
+    <div class="imgBtnBlock">
+      <input style="display: none" type="file" (change)="getSmallImg($event)" #fileInput1>
+      <button class="imgBtn" (click)="fileInput1.click()">Small Image</button>
+    </div>
+    <p class="imgInd">{{this.smallImgInd}}</p>
+    <div class="imgBtnBlock">
+      <input style="display: none" type="file" (change)="getBigImg($event)" #fileInput2>
+      <button class="imgBtn" (click)="fileInput2.click()">Large Image</button>
+    </div>
+    <p class="imgInd">{{this.bigImgInd}}</p>
+  </div>
   <button class="btn btn-secondary btn-block line" (click)="createHero()">Create new character</button>
-  <!-- <p *ngIf="errMessage" class="err card-footer">{{errMessage}}</p> -->
+  <p class="err card-footer">{{errMessage}}</p>
 </div>
