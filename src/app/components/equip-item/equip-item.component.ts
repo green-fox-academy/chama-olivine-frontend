@@ -9,6 +9,7 @@ import { HeroService } from '../../services/heroservice/hero.service';
 })
 export class EquipItemComponent implements OnInit {
   @Input() selectedItem: Equipment;
+  @Input() heroId: string;
   @Output() itemEquipped: EventEmitter<any> = new EventEmitter;
 
   constructor(private heroService: HeroService) { }
@@ -17,7 +18,7 @@ export class EquipItemComponent implements OnInit {
   }
 
   equipItem() {
-    return this.heroService.equipItem(this.selectedItem.id, 'equip').subscribe((res) => {
+    return this.heroService.equipItem(this.selectedItem.id, 'equip', this.heroId).subscribe((res) => {
       this.itemEquipped.emit(res);
     });
   }

@@ -38,7 +38,16 @@ export class HeroService {
   }
 
   getHero(heroId): Observable<HeroModel> {
-    const request = this.http.get(`${environment.hostname}/hero/${heroId}`);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+    });
+    headers = headers.append('heroid', heroId);
+    const options = {
+      headers: headers
+    };
+
+    const request = this.http.get(`${environment.hostname}/hero/${heroId}`, options);
     return request.pipe(map(res => {
       return new HeroModel(res);
     }),
@@ -49,7 +58,16 @@ export class HeroService {
   }
 
   heroAction(heroId, type): Observable<Object> {
-    const request = this.http.put(`${environment.hostname}/hero/${heroId}/action/${type}`, {});
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+    });
+    headers = headers.append('heroid', heroId);
+    const options = {
+      headers: headers
+    };
+
+    const request = this.http.put(`${environment.hostname}/hero/${heroId}/action/${type}`, {}, options);
     return request.pipe(map(res => {
       return res;
     }),
@@ -59,15 +77,16 @@ export class HeroService {
     );
   }
 
-  public equipItem(itemId: number, actionType: string): Observable<any> {
-
-    const headers = new HttpHeaders({
+  public equipItem(itemId: number, actionType: string, heroId: string): Observable<any> {
+    let headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
+      'Access-Control-Allow-Origin': '*',
     });
+    headers = headers.append('heroid', heroId);
     const options = {
-      headers
+      headers: headers
     };
+
     const request = this.http.post(`${environment.hostname}/hero/use`, { actionType: actionType, id: itemId }, options);
     return request;
   }
