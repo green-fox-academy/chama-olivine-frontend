@@ -39,11 +39,11 @@ export class HeroModel {
     this._bigImage = champion.bigImage;
     this._smallImage = champion.smallImage;
     this._finalwords = champion.finalWords;
-    this._healthMaxUpgraded = this.healthMaxUpgrade();
-    this._healthActUpgraded = this.healthActUpgrade();
-    this._attackMaxUpgraded = this.attackMaxUpgrade();
-    this._attackMinUpgraded = this.attackMinUpgrade();
-    this._defenseUpgraded = this.defenseUpgrade();
+    this._healthMaxUpgraded = this.activateBonus(champion, 'healthmax');
+    this._healthActUpgraded = this.activateBonus(champion, 'healthact');
+    this._attackMaxUpgraded = this.activateBonus(champion, 'attackmax');
+    this._attackMinUpgraded = this.activateBonus(champion, 'attackmin');
+    this._defenseUpgraded = this.activateBonus(champion, 'defense');
     this._neededExp = this.calcNeededExp(this.level);
     this._healthActPercentage = this.calcHealthActPercentage();
     this._activeItems = this.activeEquipments();
@@ -192,4 +192,16 @@ export class HeroModel {
       return element;
     });
   }
+
+  totalAttributeModifier(champion, attribute) {
+    return champion.inventory.filter(equipment => equipment.active === true)
+      .map(equipment => equipment.modifiers.filter(modifier => modifier.attributeName === attribute))
+      .reduce((flattenedArrays, mods) => flattenedArrays.concat(mods), [])
+      .reduce((finalValue, modifier) => finalValue + modifier.value, 0);
+  }
+
+  activateBonus(champion, attribute) {
+    return champion[attribute] += this.totalAttributeModifier(champion, attribute);
+  }
+
 }
