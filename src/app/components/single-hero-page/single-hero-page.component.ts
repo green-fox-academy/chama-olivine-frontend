@@ -17,7 +17,7 @@ export class SingleHeroPageComponent implements OnDestroy {
   private _equipmentId: number;
   options: Object[] = [
     { type: 'rest', description: '+HP' },
-    { type: 'train', description: '-HP, +Attack' },
+    // { type: 'train', description: '-HP, +Attack' },
     { type: 'scout', description: '-HP, scouts next enemy' },
   ];
   percent: number;
@@ -54,7 +54,7 @@ export class SingleHeroPageComponent implements OnDestroy {
   }
 
   calculateElapsedTime(timestamp): void {
-    const activityPercent = Number(((Date.now() / 1000 - timestamp) / 60 / 60 * 100).toFixed(2));
+    const activityPercent = Number(((Date.now() / 1000 - timestamp) / 60 * 100).toFixed(0));
     activityPercent > 100 ? this.percent = 100 : this.percent = activityPercent;
   }
 
