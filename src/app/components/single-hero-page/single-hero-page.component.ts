@@ -56,6 +56,7 @@ export class SingleHeroPageComponent implements OnDestroy {
   calculateElapsedTime(timestamp): void {
     const activityPercent = Number(((Date.now() / 1000 - timestamp) / 60 * 100).toFixed(0));
     activityPercent > 100 ? this.percent = 100 : this.percent = activityPercent;
+    this.heroService.getHero(this._id).subscribe(data => this._hero = data);
   }
 
   public get hero(): HeroModel {
